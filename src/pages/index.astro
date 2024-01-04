@@ -1,21 +1,50 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import SocialPill from "../components/SocialPill.astro";
+import MailIcon from "../components/icons/Mail.astro";
 ---
 
-<Layout title="EplojaDev">
+<Layout title="Portfolio de eploja - Desarollador y Programador web con 1 año de experiencia"
+description="Eploja - Desarollador y Programador web con 1 año de experiencia"
+>
 	<main>
 		<section class="w-full lg:w-[740px] mx-auto py-44">
-			<img class="rounded-full w-12 h-12 mb-4" src="https://eploja.github.io/img/yo.webp" alt="eploja photo" />
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-				Hey, soy eplojadev <a href="https://www.linkedin.com/in/eploja" target="_blank" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a>
+			<img
+				class="rounded-full size-12 mb-4"
+				src="https://eploja.github.io/img/yo.webp"
+				alt="eploja photo"
+			/>
+			<h1
+				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10"
+			>
+				Hey, soy eplojadev <a
+					href="https://www.linkedin.com/in/eploja"
+					target="_blank"
+					class="flex justify-center items-center"
+					><Badge>Disponible para trabajar</Badge></a
+				>
 			</h1>
 			<h2 class="text-2xl text-wrap">
-				<span>+1 año de experiencia.</span> <span class="text-yellow-200/90"> Desarrollador web.</span> <span class="text-red-200/90"> De Córdoba, España.</span><span class="opacity-85"> Especializado en crear aplicaciones web.</span>
+				<span>+1 año de experiencia.</span> <span class="text-yellow-200/90"> Desarrollador web.</span> <span class="text-red-200/90"> De Córdoba, España.</span><span class="opacity-75"> Especializado en crear aplicaciones web.</span>
 			</h2>
-			<ul>
-	
-			</ul>
+			<nav class="flex gap-x-4 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/eploja">
+					<LinkedInIcon class="size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/eploja">
+					<GithubIcon class="size-6" />
+					GitHub
+				</SocialPill>
+				<!-- correo -->
+				<SocialPill href="mailto:">
+					<MailIcon class="size-6" />
+					eploja.dev@gmail.com
+				</SocialPill>
+			</nav>
 		</section>
 	</main>
 </Layout>
